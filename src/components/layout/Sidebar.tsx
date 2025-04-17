@@ -31,7 +31,7 @@ export function Sidebar() {
   return (
     <div
       className={cn(
-        'group h-screen flex-shrink-0 border-r bg-background transition-all duration-300 ease-in-out',
+        'group h-auto flex-shrink-0 border-r bg-background transition-all duration-300 ease-in-out',
         collapsed ? 'w-16' : 'w-64'
       )}
     >

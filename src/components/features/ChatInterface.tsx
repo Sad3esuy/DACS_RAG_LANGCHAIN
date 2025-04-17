@@ -105,7 +105,7 @@ return (
 <div className="flex h-full flex-col">
   <div className="flex-1 overflow-y-auto p-4 space-y-6">
     {messages.length === 0 ? (
-      <div className="flex h-full flex-col items-center justify-center text-center">
+      <div className="flex h-auto mt-20 flex-col items-center justify-center text-center">
         <div className="rounded-full bg-primary/10 p-4">
           <User className="h-8 w-8 text-primary" />
         </div>
@@ -206,7 +206,7 @@ return (
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Type your message..."
-          className="flex w-full rounded-md border border-input bg-background p-3 pr-12 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-h-[200px] min-h-[44px] resize-none"
+          className="flex w-full rounded-md border border-input bg-background p-3 pr-12 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 h-auto max-h-[200px] min-h-[50px] resize-none overflow-y-auto scrollbar-hide"
           rows={1}
           onKeyDown={(e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
@@ -219,7 +219,7 @@ return (
           type="submit"
           size="icon"
           disabled={!inputValue.trim() || isProcessing}
-          className="absolute bottom-1 right-1 h-8 w-8"
+          className="absolute bottom-2 right-1 h-8 w-8"
         >
           <Send className="h-4 w-4" />
           <span className="sr-only">Send message</span>

@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export function MainLayout({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider>
-      <div className="flex h-screen overflow-hidden bg-background">
+      <div className="flex h-fix overflow-hidden bg-background">
         <Sidebar />
         <div className="flex flex-1 flex-col overflow-hidden">
           <Header />
