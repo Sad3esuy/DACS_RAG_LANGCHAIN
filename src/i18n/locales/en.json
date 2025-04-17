@@ -1,0 +1,52 @@
+{
+    "common": {
+      "dashboard": "Dashboard",
+      "import": "Import",
+      "chat": "Chat",
+      "history": "History",
+      "settings": "Settings",
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "totalDocuments": "Total Documents",
+      "totalQueries": "Total Queries",
+      "avgResponseTime": "Avg. Response Time",
+      "documentsTab": "Documents",
+      "queriesTab": "Queries",
+      "performanceTab": "Performance",
+      "lastWeek": "Last 7 days",
+      "lastMonth": "Last 30 days"
+    },
+    "import": {
+      "title": "Import Documents",
+      "description": "Upload documents to add them to your knowledge base. They will be processed and indexed automatically.",
+      "dragDrop": "Drag & drop files here",
+      "selectFiles": "Select Files",
+      "supportedFormats": "Supports PDF, DOC, DOCX, TXT, MD, CSV",
+      "documentLibrary": "Document Library"
+    },
+    "chat": {
+      "title": "Chat",
+      "startConversation": "Start a conversation",
+      "askQuestion": "Ask questions about your documents and get answers with citations.",
+      "typeMessage": "Type your message...",
+      "send": "Send",
+      "sources": "Sources"
+    },
+    "documents": {
+      "name": "Name",
+      "type": "Type",
+      "size": "Size",
+      "uploaded": "Uploaded",
+      "status": "Status",
+      "actions": "Actions",
+      "view": "View",
+      "delete": "Delete",
+      "confirmDelete": "Are you sure you want to delete this document? This action cannot be undone.",
+      "noDocuments": "No documents found.",
+      "showing": "Showing {{start}} to {{end}} of {{total}} documents",
+      "page": "Page {{current}} of {{total}}"
+    }
+  }

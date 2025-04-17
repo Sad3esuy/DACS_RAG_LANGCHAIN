@@ -1,0 +1,53 @@
+{
+    "common": {
+      "dashboard": "Trang chủ",
+      "import": "Nhập liệu",
+      "chat": "Trò chuyện",
+      "history": "Lịch sử",
+      "settings": "Cài đặt",
+      "profile": "Hồ sơ",
+      "logout": "Đăng xuất"
+    },
+    "dashboard": {
+      "title": "Trang chủ",
+      "totalDocuments": "Tổng số tài liệu",
+      "totalQueries": "Tổng số truy vấn",
+      "avgResponseTime": "Thời gian phản hồi TB",
+      "documentsTab": "Tài liệu",
+      "queriesTab": "Truy vấn",
+      "performanceTab": "Hiệu suất",
+      "lastWeek": "7 ngày qua",
+      "lastMonth": "30 ngày qua"
+    },
+    "import": {
+      "title": "Nhập tài liệu",
+      "description": "Tải lên tài liệu để thêm vào cơ sở tri thức của bạn. Chúng sẽ được xử lý và lập chỉ mục tự động.",
+      "dragDrop": "Kéo và thả tệp tại đây",
+      "selectFiles": "Chọn tệp",
+      "supportedFormats": "Hỗ trợ các định dạng: PDF, DOC, DOCX, TXT, MD, CSV",
+      "documentLibrary": "Thư viện tài liệu"
+    },
+    "chat": {
+      "title": "Trò chuyện",
+      "startConversation": "Bắt đầu cuộc trò chuyện",
+      "askQuestion": "Đặt câu hỏi về tài liệu của bạn và nhận câu trả lời có trích dẫn.",
+      "typeMessage": "Nhập tin nhắn...",
+      "send": "Gửi",
+      "sources": "Nguồn trích dẫn"
+    },
+    "documents": {
+      "name": "Tên",
+      "type": "Loại",
+      "size": "Kích thước",
+      "uploaded": "Đã tải lên",
+      "status": "Trạng thái",
+      "actions": "Hành động",
+      "view": "Xem",
+      "delete": "Xóa",
+      "confirmDelete": "Bạn có chắc muốn xóa tài liệu này? Hành động này không thể hoàn tác.",
+      "noDocuments": "Không tìm thấy tài liệu.",
+      "showing": "Hiển thị từ {{start}} đến {{end}} trong tổng số {{total}} tài liệu",
+      "page": "Trang {{current}} của {{total}}"
+    }
+  }
+  
