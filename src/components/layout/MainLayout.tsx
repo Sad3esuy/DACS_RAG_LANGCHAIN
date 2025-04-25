@@ -1,21 +1,38 @@
 // src/components/layout/MainLayout.tsx
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
-import { ThemeProvider } from '@/contexts/ThemeContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { cn } from '@/lib/utils';
 
 export function MainLayout({ children }: { children: ReactNode }) {
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+
   return (
-    <ThemeProvider>
+    <>
       <div className="flex h-fix overflow-hidden bg-background">
-        <Sidebar />
+        {/* Mobile Sidebar Overlay */}
+        {isMobileSidebarOpen && (
+          <div 
+            className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden"
+            onClick={() => setIsMobileSidebarOpen(false)}
+          />
+        )}
+        
+        {/* Sidebar */}
+        <div className={cn(
+          'fixed md:relative z-50 transition-transform duration-300 ease-in-out',
+          isMobileSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+        )}>
+          <Sidebar />
+        </div>
+
         <div className="flex flex-1 flex-col overflow-hidden">
-          <Header />
-          <main className="flex-1 overflow-auto p-6">
+          <Header onMobileMenuClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)} />
+          <main className="flex-1 overflow-auto p-4 md:p-6">
             {children}
           </main>
         </div>
@@ -31,6 +48,6 @@ export function MainLayout({ children }: { children: ReactNode }) {
         draggable
         pauseOnHover
       />
-    </ThemeProvider>
+    </>
   );
 }

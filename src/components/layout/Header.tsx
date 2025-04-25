@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
+import { Menu, Sun, Moon, ChevronDown } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,7 +15,11 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { useTheme } from '@/contexts/ThemeContext';
 
-export function Header() {
+interface HeaderProps {
+  onMobileMenuClick: () => void;
+}
+
+export function Header({ onMobileMenuClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
@@ -46,7 +50,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-xl font-bold">RAG & LangChain App</div>
+            <div className="text-lg md:text-xl font-bold">RAG & LangChain App</div>
           </Link>
           
           {/* Breadcrumbs - hidden on mobile */}
@@ -107,13 +111,9 @@ export function Header() {
           variant="ghost"
           size="icon"
           className="md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onClick={onMobileMenuClick}
         >
-          {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
+          <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
 

@@ -1,0 +1,21 @@
+{
+  "name": "RAG & LangChain App",
+  "short_name": "RAG App",
+  "description": "A powerful RAG (Retrieval-Augmented Generation) application built with LangChain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

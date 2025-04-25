@@ -32,7 +32,8 @@ export function Sidebar() {
     <div
       className={cn(
         'group h-auto flex-shrink-0 border-r bg-background transition-all duration-300 ease-in-out',
-        collapsed ? 'w-16' : 'w-64'
+        'w-full md:w-64',
+        collapsed && 'md:w-16'
       )}
     >
       <div className="flex h-full flex-col justify-between">
@@ -48,7 +49,7 @@ export function Sidebar() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setCollapsed(!collapsed)}
-                className="h-8 w-8"
+                className="hidden md:flex h-8 w-8"
               >
                 {collapsed ? (
                   <ChevronRight className="h-4 w-4" />
@@ -68,14 +69,15 @@ export function Sidebar() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    'flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground',
+                    'flex items-center rounded-md px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground',
+                    'md:py-2',
                     pathname === item.href
                       ? 'bg-accent text-accent-foreground'
                       : 'text-muted-foreground',
-                    collapsed && 'justify-center px-2'
+                    collapsed && 'md:justify-center md:px-2'
                   )}
                 >
-                  <item.icon className={cn('h-5 w-5', collapsed ? 'mr-0' : 'mr-2')} />
+                  <item.icon className={cn('h-5 w-5', !collapsed && 'md:mr-2')} />
                   {!collapsed && <span>{item.name}</span>}
                 </Link>
               ))}

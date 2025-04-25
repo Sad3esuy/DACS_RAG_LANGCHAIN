@@ -120,3 +120,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .h-fix {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text size adjustment */
+  * {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Improve scrolling on iOS */
+  .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
