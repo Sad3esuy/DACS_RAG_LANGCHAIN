@@ -49,9 +49,6 @@ export function Header({ onMobileMenuClick }: HeaderProps) {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-lg md:text-xl font-bold">RAG & LangChain App</div>
-          </Link>
           
           {/* Breadcrumbs - hidden on mobile */}
           <nav className="hidden md:flex items-center space-x-2">
